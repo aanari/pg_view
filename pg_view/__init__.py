@@ -161,11 +161,6 @@ def do_loop(screen, groups, output_method, collectors, consumer):
 def main():
     global options
 
-    # bail out if we are not running Linux
-    if platform.system() != 'Linux':
-        print('Non Linux database hosts are not supported at the moment. Can not continue')
-        sys.exit(243)
-
     if not psycopg2_available:
         print('Unable to import psycopg2 module, please, install it (python-psycopg2). Can not continue')
         sys.exit(254)
